@@ -6,7 +6,7 @@ module demo {
     source = "akalybekova5/gke/gcp"
     gke_config = {
         cluster_name = "project-cluster"
-        location = "us-central1"
+        location     =  "us-central1"
         node_count = 1
         min_node_count = 1
         max_node_count = 2
