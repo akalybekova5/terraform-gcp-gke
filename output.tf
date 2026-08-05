@@ -1,9 +1,10 @@
 output "cluster_name" {
-  value       = var.gke_config["cluster_name"]
+  value       = google_container_cluster.primary.name
   description = "The name of the Kubernetes cluster."
 }
 
 output "cluster_location" {
-  value       = var.gke_config["location"]
-  description = "The GCP region or zone where the cluster is deployed."
+  value       = google_container_cluster.primary.location
+  description = "The regional or zonal location of the cluster."
 }
+
