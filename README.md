@@ -23,4 +23,10 @@ module demo {
 ```
 terraform init
 terraform apply
+
+### To see output cluster name and location 
+
+terraform output cluster_name
+terraform output cluster_location
+
 ```
