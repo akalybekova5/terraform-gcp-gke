@@ -32,10 +32,18 @@ terraform output cluster_location
 ```
 
 
-### To see output cluster name and location 
+### To see output add below code
 
 ```
-terraform output cluster_name
-terraform output cluster_location
+output "cluster_name" {
+  value       = google_container_cluster.primary.name
+  description = "The name of the Kubernetes cluster."
+}
+
+output "cluster_location" {
+  value       = google_container_cluster.primary.location
+  description = "The regional or zonal location of the cluster"
+}
+
 
 ```
