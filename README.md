@@ -36,12 +36,13 @@ terraform output cluster_location
 
 ```
 output "cluster_name" {
-  value       = google_container_cluster.primary.name
-  description = "The name of the Kubernetes cluster."
+  value = module.demo.cluster_name
 }
 
 output "cluster_location" {
-  value       = google_container_cluster.primary.location
-  description = "The regional or zonal location of the cluster"
+  value = module.demo.cluster_location
 }
+
+
+
 ```
